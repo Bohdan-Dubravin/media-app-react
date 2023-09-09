@@ -1,3 +1,3 @@
 export function someFn() {
-  console.log('WORKING');
+  console.log('WORKING dev');
 }

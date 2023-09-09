@@ -1,11 +1,14 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
 import webpack from 'webpack';
+import { BuildOptions, BuildPaths } from './types/config';
 
-export default function buildPlugins(): webpack.WebpackPluginInstance[] {
+export default function buildPlugins(
+  paths: BuildPaths
+): webpack.WebpackPluginInstance[] {
   return [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'public', 'index.html'),
+      template: paths.html,
     }),
     new webpack.ProgressPlugin(),
   ];
