@@ -8,8 +8,11 @@ export default function buildResolvers(options: BuildOptions): ResolveOptions {
     preferAbsolute: true,
     modules: [options.paths.src, 'node_modules'],
     alias: {
-      '@': options.paths.src,
+      '@': path.resolve(options.paths.src),
       '@helpers': path.resolve(options.paths.src, 'helpers'),
+      '@app': path.resolve(options.paths.src, 'app'),
+      '@shared': path.resolve(options.paths.src, 'shared'),
+      '@pages': path.resolve(options.paths.src, 'pages'),
     },
   };
 }

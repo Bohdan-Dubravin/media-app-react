@@ -1,10 +1,8 @@
-import { Route, Routes } from 'react-router-dom';
 import './styles/index.scss';
-
-import { Link } from 'react-router-dom';
-
-import { Suspense, useState } from 'react';
+import { useState } from 'react';
 import classNames from '@helpers/classNames/classNames';
+import { AppRouter } from '@app/providers/router';
+import { Link } from 'react-router-dom';
 export enum Theme {
   LIGHT = 'light',
   DARK = 'dark',
@@ -20,11 +18,8 @@ export const App = () => {
   return (
     <div className={classNames('app', {}, [theme])}>
       <button onClick={toggleTheme}>On click </button>
-      <Link to={'/about'}>About</Link>
-      <Link to={'/'}>Main</Link>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Routes></Routes>
-      </Suspense>
+      <Link to="/about">about</Link>
+      <AppRouter />
     </div>
   );
 };

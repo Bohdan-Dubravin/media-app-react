@@ -29,7 +29,10 @@
     "baseUrl": "./src",
     "paths": {
       "@/*": ["/*"],
-      "@helpers/*": ["helpers/*"]
+      "@helpers/*": ["helpers/*"],
+      "@app/*": ["app/*"],
+      "@shared/*": ["shared/*"],
+      "@pages/*": ["pages/*"]
     },
     "allowSyntheticDefaultImports": true
   },
