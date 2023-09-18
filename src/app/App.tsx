@@ -1,8 +1,9 @@
 import './styles/index.scss';
 import { useState } from 'react';
-import classNames from '@helpers/classNames/classNames';
+import classNames from '@shared/lib/classNames/classNames';
 import { AppRouter } from '@app/providers/router';
-import { Link } from 'react-router-dom';
+
+import { Navbar } from '@widgets/Navbar';
 export enum Theme {
   LIGHT = 'light',
   DARK = 'dark',
@@ -17,8 +18,9 @@ export const App = () => {
 
   return (
     <div className={classNames('app', {}, [theme])}>
+      <Navbar />
       <button onClick={toggleTheme}>On click </button>
-      <Link to="/about">about</Link>
+
       <AppRouter />
     </div>
   );

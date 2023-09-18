@@ -1,15 +1,11 @@
 import { AboutPage } from '@pages/AboutPage';
 import { MainPage } from '@pages/MainPage';
+import { RouteProps } from 'react-router-dom';
 
 export enum AppRoutes {
   MAIN = 'main',
   ABOUT = 'about',
 }
-
-type RouteProps = {
-  path: string;
-  element: React.ReactNode;
-};
 
 export const RoutePath: Record<AppRoutes, string> = {
   [AppRoutes.MAIN]: '/',

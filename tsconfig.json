@@ -29,7 +29,7 @@
     "baseUrl": "./src",
     "paths": {
       "@/*": ["/*"],
-      "@helpers/*": ["helpers/*"],
+      "@widgets/*": ["widgets/*"],
       "@app/*": ["app/*"],
       "@shared/*": ["shared/*"],
       "@pages/*": ["pages/*"]

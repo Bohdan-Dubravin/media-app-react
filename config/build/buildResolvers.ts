@@ -9,7 +9,7 @@ export default function buildResolvers(options: BuildOptions): ResolveOptions {
     modules: [options.paths.src, 'node_modules'],
     alias: {
       '@': path.resolve(options.paths.src),
-      '@helpers': path.resolve(options.paths.src, 'helpers'),
+      '@widgets': path.resolve(options.paths.src, 'widgets'),
       '@app': path.resolve(options.paths.src, 'app'),
       '@shared': path.resolve(options.paths.src, 'shared'),
       '@pages': path.resolve(options.paths.src, 'pages'),
