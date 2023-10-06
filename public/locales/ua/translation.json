@@ -1,4 +1,5 @@
 {
   "test": "тест",
-  "language": "Мова"
+  "language": "Мова",
+  "notFoundPage": "Сторінка не знайдена"
 }

@@ -6,6 +6,17 @@ export default function buildLoaders(
 ): webpack.RuleSetRule[] {
   const svgLoader = { test: /\.svg$/, use: ['@svgr/webpack'] };
 
+  const babelLoader = {
+    test: /\.m?js|ts|tsx$/,
+    exclude: /node_modules/,
+    use: {
+      loader: 'babel-loader',
+      options: {
+        presets: ['@babel/preset-env'],
+      },
+    },
+  };
+
   const fileLoader = {
     test: /\.(png|jpe?g|gif)$/i,
     use: [
@@ -40,5 +51,5 @@ export default function buildLoaders(
     use: 'ts-loader',
     exclude: /node_modules/,
   };
-  return [fileLoader, svgLoader, tsLoaders, cssLoaders];
+  return [fileLoader, babelLoader, svgLoader, tsLoaders, cssLoaders];
 }

@@ -21,7 +21,6 @@ export const LangSwitcher = ({ className }: LangSwitcherProps) => {
       onClick={toggle}
     >
       {t('language')}
-      {t('new')}
     </Button>
   );
 };
