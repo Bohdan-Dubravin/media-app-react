@@ -37,6 +37,7 @@
     },
     "allowSyntheticDefaultImports": true
   },
+  "include": ["./config/jest/setupJest.ts"],
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"

@@ -1,25 +1,25 @@
-import classNames from './classNames';
+import classNames from "@shared/lib/classNames/classNames";
 
-describe('classNames', () => {
-  test('with first param', () => {
-    expect(classNames('someClass')).toBe('someClass');
+describe("classNames", () => {
+  test("with first param", () => {
+    expect(classNames("someClass")).toBe("someClass");
   });
-  test('with additional class', () => {
-    expect(classNames('someClass', { testClass: true })).toBe(
-      'someClass testClass'
+  test("with additional class", () => {
+    expect(classNames("someClass", { testClass: true })).toBe(
+      "someClass testClass"
     );
   });
-  test('with all params', () => {
-    const expected = 'someClass class1 class2 testClass';
+  test("with all params", () => {
+    const expected = "someClass class1 class2 testClass";
     expect(
-      classNames('someClass', { testClass: true }, ['class1', 'class2'])
+      classNames("someClass", { testClass: true }, ["class1", "class2"])
     ).toBe(expected);
   });
 
-  test('with mods false', () => {
-    const expected = 'someClass class1 class2';
+  test("with mods false", () => {
+    const expected = "someClass class1 class2";
     expect(
-      classNames('someClass', { testClass: false }, ['class1', 'class2'])
+      classNames("someClass", { testClass: false }, ["class1", "class2"])
     ).toBe(expected);
   });
 });
